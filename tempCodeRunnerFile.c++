@@ -1,1 +1,1 @@
-min
+cout<<endl;
