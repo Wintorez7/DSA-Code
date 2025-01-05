@@ -2,7 +2,20 @@
 #include <vector>
 #include <cctype>
 #include <string>
+#include <limits.h>
 using namespace std;
+
+
+bool findKey(int arr[][3], int rows, int cols, int key){
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            if(arr[i][j] == key){
+                return true;
+            }
+        }
+    }
+    return false;
+}
 
 
 void printRowWiseSum(int arr[][3], int rows, int cols){
@@ -11,11 +24,25 @@ void printRowWiseSum(int arr[][3], int rows, int cols){
     for(int i=0; i<rows; i++){
         int sum = 0;
         for(int j=0; j<cols; j++){
-            sum = sum + arr[i][j];
+            sum = sum + arr[j][i];
         }
         cout<<sum<<endl;
     }
 }
+
+
+int getMax(int arr[][3], int rows, int cols){
+    int maxi = INT_MIN;
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            if(arr[i][j] > maxi){
+                maxi = arr[i][j];
+            }
+        }
+    }
+    return maxi;
+}
+
 
 int main() {
 
@@ -30,16 +57,18 @@ int main() {
     }
     cout<<endl;
 
-    cout<<"Printing Row wise"<<endl;
-    for(int i=0; i<rows; i++){
-        for(int j=0; j<cols; j++){
-            cout << arr[i][j]<<" ";
-        }
-        cout<<endl;
-    }
+    // cout<<"Printing Row wise"<<endl;
+    // for(int i=0; i<rows; i++){
+    //     for(int j=0; j<cols; j++){
+    //         cout << arr[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
     
 
-    printRowWiseSum(arr,rows,cols);
+    // printRowWiseSum(arr,rows,cols);
+    // cout <<findKey(arr,3,3,12)<<endl;
+    cout << getMax(arr, rows , cols);
     
 
 }

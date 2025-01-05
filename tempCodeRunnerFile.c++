@@ -1,7 +1,7 @@
-
-// using std::cout;
-// using std::cin;
-// using std::endl;
-// using std::string;
-// using std::vector;
-
+cout<<"Printing Row wise"<<endl;
+    // for(int i=0; i<rows; i++){
+    //     for(int j=0; j<cols; j++){
+    //         cout << arr[i][j]<<" ";
+    //     }
+    //     cout<<endl;
+    // }
