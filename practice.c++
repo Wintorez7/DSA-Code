@@ -4,13 +4,51 @@
 #include <string>
 using namespace std;
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::string;
-using std::vector;
+
+void printRowWiseSum(int arr[][3], int rows, int cols){
+    // row sum -> row traversal
+    cout<<"Printing Row wise sum"<<endl;
+    for(int i=0; i<rows; i++){
+        int sum = 0;
+        for(int j=0; j<cols; j++){
+            sum = sum + arr[i][j];
+        }
+        cout<<sum<<endl;
+    }
+}
 
 int main() {
+
+    int arr[3][3];
+    int rows = 3;
+    int cols = 3;
+
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            cin >> arr[i][j];
+        }
+    }
+    cout<<endl;
+
+    cout<<"Printing Row wise"<<endl;
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            cout << arr[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    
+
+    printRowWiseSum(arr,rows,cols);
+    
+
+}
+
+
+
+
+
+
 //     vector<int> histogram('z' - 'a' + 1, 0); // Vector to store letter frequencies
 
 //     string in_str;
@@ -39,9 +77,6 @@ int main() {
 
 //     return 0;
 // }
-
-
-
 
 
 // int findUnique(vector<int>arr){
@@ -94,26 +129,3 @@ int main() {
     //     }
     //     cout<<endl;
     // }
-
-    int arr[3][3];
-    int row = 3;
-    int col = 3;
-
-    for(int i=0; i<row; i++){
-        for(int j=0; j<col; j++){
-            cin >> arr[i][j];
-        }
-    }
-    cout<<endl;
-
-    cout<<"Printing Row wise"<<endl;
-    for(int i=0; i<row; i++){
-        for(int j=0; j<col; j++){
-            cout << arr[i][j]<<" ";
-        }
-        cout<<endl;
-    }
-    
-    return 0;
-
-}
