@@ -43,6 +43,18 @@ int getMax(int arr[][3], int rows, int cols){
     return maxi;
 }
 
+int getMin(int arr[][3], int rows, int cols){
+    int mini = INT_MAX;
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            if(arr[i][j] < mini){
+                mini = arr[i][j];
+            }
+        }
+    }
+    return mini;
+}
+
 
 int main() {
 
@@ -68,8 +80,8 @@ int main() {
 
     // printRowWiseSum(arr,rows,cols);
     // cout <<findKey(arr,3,3,12)<<endl;
-    cout << getMax(arr, rows , cols);
-    
+    cout <<"Maximum Number :"<<getMax(arr, rows , cols)<<endl;
+    cout <<"Minimum Number :"<<getMin(arr, rows , cols)<<endl;
 
 }
 
