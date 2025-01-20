@@ -31,7 +31,6 @@ int binarySeacrh(int arr[],int size, int target){
 
 }
 
-
 int main(){
 
     int arr[] = {2,6,8,10,12,14,16};
@@ -43,7 +42,7 @@ int main(){
     if(indexTarget == -1){
         cout<<"target not found  "<<endl;
     }else{
-        cout<<"target Found at  "<< indexTarget <<endl;
+        cout<<"target Found at "<< indexTarget<<" index"<<endl;
     }
 
     return 0; 
