@@ -85,17 +85,16 @@ int main(){
     while (i <= end)
     {
         if(arr[i] == 0){
-            swap(arr[start],arr[i]);
+            swap(arr[i],arr[start]);
             start++;
             i++;
         }else if(arr[i] == 1){
-            swap(arr[i],arr[end]);
+            swap(arr[end],arr[i]);
             end--;
-
         }
     }
     
-    for(auto value: arr){
+    for(auto value:arr){
         cout<<value<<" ";
     }
 
